@@ -16,7 +16,7 @@ const Footer = () => {
                 <b>
                     <a className='s' href="https://www.facebook.com/merejo.escobal" target="_blank" rel="noopener noreferrer">
 
-                        <i className="fab fa-facebook"></i> Kasiques technoloy 1
+                        <i className="fab fa-facebook"></i> Kasiques technoloy 2
 
                         <i className="fab fa-facebook"></i> Kasiques technoloy 2
                     </a>
