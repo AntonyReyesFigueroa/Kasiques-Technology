@@ -130,6 +130,7 @@ a {
 
 
 @media only screen and (min-width: 1400px) {
+
     .nav__logo>img {
         width: 80px;
     }
@@ -142,7 +143,11 @@ a {
 
 @media only screen and (max-width: 768px) {
     .nav__logo>img {
-        width: 100px;
+        width: 75px;
+    }
+
+    .nav__logo > p{
+        font-size:10px;
     }
 
     .nav__user>img {
@@ -172,6 +177,7 @@ a {
         grid-template-rows: 85px;
         flex-direction: column;
         width: 100vw;
+        
     }
 
     .nav_toogle {
@@ -191,6 +197,8 @@ a {
         transform-origin: 5px 0px;
         transition: all 0.2s linear;
     }
+
+
 
     .nav_toogle.open>span:nth-child(1) {
         transform: rotate(45deg) translate(0, 0);

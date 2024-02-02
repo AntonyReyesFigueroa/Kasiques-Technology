@@ -29,7 +29,8 @@ const Header = ({ isOpen, setIsOpen }) => {
 
             <div className={`nav__links ${isOpen && "open__menu"}`} onClick={() => setIsOpen(false)} >
                 <li> <Link to='/'>Inicio</Link> </li>
-                <li> <Link to='/sobre-nosotros'>Sobre nosotros</Link> </li>
+                <li> <Link to='/sobre-nosotros'>Acerca de</Link> </li>
+                <li> <Link to='/sobre-nosotros'>Contacto</Link> </li>
                 {/* <li> <Link to='/'>Carta</Link> </li> */}
                 {/* <li> <Link to='/'>Reserva</Link> </li> */}
 
@@ -37,33 +38,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
 
 
-                {
-                    isAuthenticated ?
 
-                        <li> <Link to='/reseña'>Reseña</Link> </li>
-
-                        :
-
-                        <li onClick={() => loginWithRedirect()}> <Link to='/reseña'>Reseña</Link> </li>
-
-                }
-
-                {
-                    isAuthenticated ?
-                        <li> <Link to='/Empleado'>Empleado</Link> </li>
-                        :
-                        <li onClick={() => loginWithRedirect()}> <Link to='/Empleado'>Empleado</Link> </li>
-                }
-
-
-                {
-                    isOpen ?
-                        isAuthenticated ?
-                            <li className='pointer' onClick={() => logout()}  >salir</li>
-                            :
-                            <li className='pointer' onClick={() => loginWithRedirect()} >Registrate</li>
-                        : ''
-                }
             </div>
 
             <div className='nav__user'>
