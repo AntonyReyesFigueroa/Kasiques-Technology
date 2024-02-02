@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='footer'>
            <div className='footer__section'>
            <b >
-                <a className='s' href="https://maps.app.goo.gl/3ykT51E4KRyd9J5H7" target="_blank" rel="noopener noreferrer">
+                <a className='s' href="https://maps.app.goo.gl/Ra1CUQnb4Xz99Sac8" target="_blank" rel="noopener noreferrer">
 
                     <i className="fas fa-map-marker-alt"></i> AV. Los heroes 0434 Bar. San Sebastian, Cajamarca
                 </a>
@@ -14,16 +14,20 @@ const Footer = () => {
            </div>
             <div className='footer__section'>
                 <b>
-                    <a className='s' href="https://www.facebook.com/merejo.escobal" target="_blank" rel="noopener noreferrer">
+                    <a className='s' href="https://www.facebook.com/profile.php?id=61555908626822" target="_blank" rel="noopener noreferrer">
 
-                        <i className="fab fa-facebook"></i> Kasiques technoloy 2
+                        <i className="fab fa-facebook"></i> @kasiquesTechnology
 
-                        <i className="fab fa-facebook"></i> Kasiques technoloy 2
                     </a>
                 </b>
                 <b>
-                    <a className='s' href="https://www.tiktok.com/@lostronkitos.namora?_t=8dfBW3lkWBy&_r=1" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-tiktok"></i> @kaiskes-technoloy prueba
+                    <a className='s' href="https://www.tiktok.com/@kasiquestechnology?_t=8jCSK1rMpa1&_r=1" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-tiktok"></i> @kasiquesTechnology
+                    </a>
+                </b>
+                <b>
+                    <a className='s' href="https://www.instagram.com/kasiquestechnology/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-instagram"></i> @kasiquesTechnology
                     </a>
                 </b>
             </div>
