@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='footer'>
            <div className='footer__section'>
            <b >
-                <a className='s' href="https://maps.app.goo.gl/3ykT51E4KRyd9J5H7" target="_blank" rel="noopener noreferrer">
+                <a className='s' href="https://maps.app.goo.gl/MTxeAd1MDSHHioME8" target="_blank" rel="noopener noreferrer">
 
                     <i className="fas fa-map-marker-alt"></i> AV. Los heroes 0434 Bar. San Sebastian, Cajamarca
                 </a>
