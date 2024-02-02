@@ -6,6 +6,7 @@ a {
 
 .nav__logo>img {
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .nav_toogle {
@@ -31,26 +32,34 @@ a {
         grid-template-columns: .4fr 1fr 250px;
         grid-template-rows: 80px;
         position: fixed;
-        width: 100%;
+        width: 100% ; 
+        
     }
 
     .nav__logo {
-        /* background-color: red; */
         display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
-        padding: 5px;
+        width: max-content;
     }
 
     .nav__logo>img {
-        width: 4vw;
-        margin: 0 10px 0 10px;
-        padding-bottom: 5px;
-        padding-top: 5px;
+        margin: 5px 10px 5px 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 70px;
+        width: auto!important;
     }
 
+    .nav__logo> p{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
 
     .nav__links {
         /* background-color: blue; */
