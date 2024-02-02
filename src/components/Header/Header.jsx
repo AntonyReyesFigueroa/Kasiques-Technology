@@ -11,13 +11,11 @@ const Header = ({ isOpen, setIsOpen }) => {
 
 
 
-
-
     return (
         <nav className='nav'>
             <div className='nav__logo'>
                 <img src={logo} alt="" />
-                <p>The silver word</p>
+                <p>Kasiques Technology</p>
 
                 <div className={`nav_toogle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
                     <span></span>
@@ -32,10 +30,6 @@ const Header = ({ isOpen, setIsOpen }) => {
                 <li> <Link to='/sobre-nosotros'>Sobre nosotros</Link> </li>
                 {/* <li> <Link to='/'>Carta</Link> </li> */}
                 {/* <li> <Link to='/'>Reserva</Link> </li> */}
-
-
-
-
 
                 {
                     isAuthenticated ?
@@ -87,11 +81,9 @@ const Header = ({ isOpen, setIsOpen }) => {
                             </button>
                             :
 
-
                             <button className='btn_inicioSecion' onClick={() => loginWithRedirect()}>
                                 Registrate
                             </button>
-
 
                     }
 
