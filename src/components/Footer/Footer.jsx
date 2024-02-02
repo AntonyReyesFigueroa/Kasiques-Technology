@@ -15,12 +15,12 @@ const Footer = () => {
             <div className='footer__section'>
                 <b>
                     <a className='s' href="https://www.facebook.com/merejo.escobal" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-facebook"></i> kaiskes tecnoloy
+                        <i className="fab fa-facebook"></i> kaiskes tecnoloy 
                     </a>
                 </b>
                 <b>
                     <a className='s' href="https://www.tiktok.com/@lostronkitos.namora?_t=8dfBW3lkWBy&_r=1" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-tiktok"></i> @lostronkitos.namora
+                        <i className="fab fa-tiktok"></i> @kaiskes-technoloy prueba
                     </a>
                 </b>
             </div>
