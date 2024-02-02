@@ -18,7 +18,7 @@ const Footer = () => {
 
                         <i className="fab fa-facebook"></i> Kasiques technoloy 1
 
-                        <i className="fab fa-facebook"></i> kaiskes tecnoloy 
+                        <i className="fab fa-facebook"></i> Kasiques technoloy 2
                     </a>
                 </b>
                 <b>
