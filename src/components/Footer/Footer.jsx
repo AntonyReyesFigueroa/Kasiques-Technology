@@ -15,7 +15,7 @@ const Footer = () => {
             <div className='footer__section'>
                 <b>
                     <a className='s' href="https://www.facebook.com/merejo.escobal" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-facebook"></i> kaiskes tecnoloy
+                        <i className="fab fa-facebook"></i> Kasiques technoloy 1
                     </a>
                 </b>
                 <b>
