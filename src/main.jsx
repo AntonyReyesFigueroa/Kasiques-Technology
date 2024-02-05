@@ -28,15 +28,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-// <React.StrictMode>
-// <Provider store={store}>
-//   <Auth0Provider domain={domain} 
-//   clientId={clientId} 
-//   redirectUri={window.location.origin}
-//   >
-//     <HashRouter>
-//       <App />
-//     </HashRouter>
-//   </Auth0Provider>
-// </Provider>
-// </React.StrictMode>,
+{/* <React.StrictMode>
+<Provider store={store}>
+  <Auth0Provider domain={domain} 
+  clientId={clientId} 
+  redirectUri={window.location.origin}
+  >
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Auth0Provider>
+</Provider>
+</React.StrictMode>, */}

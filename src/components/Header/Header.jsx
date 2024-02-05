@@ -32,8 +32,6 @@ const Header = ({ isOpen, setIsOpen }) => {
                 {/* <li> <Link to='/'>Carta</Link> </li> */}
                 {/* <li> <Link to='/'>Reserva</Link> </li> */}
 
-                    isAuthenticated ?
-
             </div>
 
             <div className='nav__user'>
