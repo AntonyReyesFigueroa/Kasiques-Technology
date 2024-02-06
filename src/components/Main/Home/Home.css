@@ -1,0 +1,14 @@
+.container_header_home{
+    display: flex;
+    justify-content: start;
+}
+
+.ul_header_home{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.li_header_home>a{
+    color: rgb(43, 152, 152);
+}

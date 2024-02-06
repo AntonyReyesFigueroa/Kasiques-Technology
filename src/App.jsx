@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Main/Home/Home'
 import Sobre_nosotros from './components/Main/SobreNosotros/Sobre_nosotros'
 import Error404 from './components/Error404'
+import comprarTodo from "./components/Main/Home/pages/ComprarTodo/ComprarTodo";
 
 
 function App() {
@@ -14,26 +15,31 @@ function App() {
 
   return (
     <>
-     <div className=" text-light bg-dark vh-100">
-      {/* Definir las rutas */}
-      <BrowserRouter>
-        {/* cargamos todos los componentes */}
-        <Header />
-        {/* Esto es lo unico que cambia */}
-        <Routes>
-          {/* Definimos cada ruta */}
-          <Route path='/' element={<Home />}></Route>
-          <Route path="/sobre-nosotros" element={<Sobre_nosotros />}></Route>
-          <Route path='/' element={<Contacto />}></Route>
-          <Route path='/*' element={<Error404 />}></Route>
+      <div className='container__app'>
 
-          <Route path='comprarTodo' element={<ComprarTodo />}></Route>
-          <Route path='ofertas' element={<ofertas />}></Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+        <header>
+          <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+        </header>
 
-    </div>
+        <main onClick={() => setIsOpen(false)}>
+          <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/sobre-nosotros' element={<Sobre_nosotros />} />
+
+          <Route path='/*' element={<Error404 />} /> 
+
+          {/* Link de los navbarShop*/}
+          <Route path="comprarTodo" element={<comprarTodo/>} />
+          {/* <Route path="celulares" element={<Celulares />} /> */}
+          </Routes>
+
+        </main>
+
+        <footer>
+          <Footer />
+        </footer>
+
+      </div>
     </>
   )
 }
