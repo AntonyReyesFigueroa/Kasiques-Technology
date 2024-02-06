@@ -4,12 +4,11 @@ import userDefault from '../../image/user_img.avif'
 import logo from '../../image/logo.png'
 import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
+import './NavbarShop.jsx'
 
 const Header = ({ isOpen, setIsOpen }) => {
 
     const { loginWithRedirect, isAuthenticated, isLoading, logout, user } = useAuth0();
-
-
 
     return (
         <nav className='nav'>
@@ -25,13 +24,27 @@ const Header = ({ isOpen, setIsOpen }) => {
 
             </div>
 
-            <div className={`nav__links ${isOpen && "open__menu"}`} onClick={() => setIsOpen(false)} >
+            <div className={`nav__links ${isOpen && "open__menu"} navbar-expand-lg`}  onClick={() => setIsOpen(false)} >
                 <li> <Link to='/'>Inicio</Link> </li>
                 <li> <Link to='/sobre-nosotros'>Acerca de</Link> </li>
-                <li> <Link to='/sobre-nosotros'>Contacto</Link> </li>
-                {/* <li> <Link to='/'>Carta</Link> </li> */}
-                {/* <li> <Link to='/'>Reserva</Link> </li> */}
+                <li> <Link to='*/'>Contacto</Link> </li>
 
+            </div>
+
+            <div className="container navbar-expand-lg">
+                <div className="row">
+                    <div className="col">
+                        <ul class="nav nav-tabs d-flex  justify-content-end align-item-center">
+                            <li class="nav-item">
+                                <Link class="nav-link text-light" aria-current="page" to="/comprarTodo">Comprar todo</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link text-light" to="/ofertas">Ofertas</Link>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div className='nav__user'>
@@ -63,21 +76,11 @@ const Header = ({ isOpen, setIsOpen }) => {
 
                 </div>
 
-                {
-                    isLoading ?
-                        <p>cargando...</p>
-                        :
-
-                        isAuthenticated ?
-                            <img className='ocultar' src={user?.picture} alt={user.name} />
-                            :
-                            <img className='ocultar' src={userDefault} alt="" />
-
-                }
-
             </div>
         </nav>
     )
 }
 
 export default Header
+
+
