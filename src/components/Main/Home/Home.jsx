@@ -1,34 +1,55 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import ComprarTodo from './pages/ComprarTodo/ComprarTodo'
 import './Home.css'
 import { useState } from 'react'
+import Celulares from './pages/Celulares/Celulares'
+import Audifonos from './pages/Audifonos/Audifonos'
+import Ofertas from './pages/Ofertas/Ofertas'
 const Home = () => {
 
-  const [headerLink, setHeaderLink] = useState('');
+  const [headerLink, setHeaderLink] = useState('celulares');
 
-  const headerHome =() => {
+  const headerComprarTodo = () => {
     setHeaderLink('comprarTodo')
   }
+
+  const headerCelulares = () => {
+    setHeaderLink('celulares')
+  }
+
+  const headerAudifonos = () => {
+    setHeaderLink('audifonos')
+  }
+
+  const headerOfertas = () => {
+    setHeaderLink('ofertas')
+  }
+
+  console.log(headerLink);
 
   return (
     <div>
 
       <div className='container_header_home'>
-        <ul className='ul_header_home'>
-          <li onClick={() => headerHome} className='li_header_home'><a href="">Comprar todo</a></li>
-          <li onClick={() => headerHome} className='li_header_home'><a href="">Celulares</a></li>
-          <li onClick={() => headerHome} className='li_header_home'><a href="">Audifonos</a></li>
-          <li onClick={() => headerHome} className='li_header_home'><a href="">Ofertas</a></li>
+        <ul className='ul_header_home nav nav-tabs d-flex justify-content-start'>
+          <li onClick={ () => setHeaderLink('comprarTodo')} className='li_header_home nav-item'><a className=' nav-link' href="">Comprar todo</a></li>
+          <li onClick={headerCelulares} className='li_header_home nav-item'><a className=' nav-link' href="">Celulares</a></li>
+          <li onClick={headerAudifonos} className='li_header_home nav-item'><a className=' nav-link' href="">Audifonos</a></li>
+          <li onClick={headerOfertas} className='li_header_home nav-item'><a className=' nav-link' href="">Ofertas</a></li>
         </ul>
       </div>
 
-      {
-        headerLink === 'comprarTodo'?
-        <ComprarTodo/>
-        :
-        null
-      }
+
+
+      <div className='p-5 mt-5' >
+        {
+          headerLink==="comprarTodo" ?
+            <ComprarTodo />
+            : 
+            ''
+        }
+      </div>
 
     </div>
   )

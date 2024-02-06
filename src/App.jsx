@@ -8,6 +8,7 @@ import Home from './components/Main/Home/Home'
 import Sobre_nosotros from './components/Main/SobreNosotros/Sobre_nosotros'
 import Error404 from './components/Error404'
 import comprarTodo from "./components/Main/Home/pages/ComprarTodo/ComprarTodo";
+import Celulares from "./components/Main/Home/pages/Celulares/Celulares";
 
 
 function App() {
@@ -23,16 +24,12 @@ function App() {
 
         <main onClick={() => setIsOpen(false)}>
           <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/sobre-nosotros' element={<Sobre_nosotros />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/sobre-nosotros' element={<Sobre_nosotros />} />
 
-          <Route path='/*' element={<Error404 />} /> 
-
-          {/* Link de los navbarShop*/}
-          <Route path="comprarTodo" element={<comprarTodo/>} />
-          {/* <Route path="celulares" element={<Celulares />} /> */}
+            <Route path='/*' element={<Error404 />} />
           </Routes>
-
+      
         </main>
 
         <footer>
