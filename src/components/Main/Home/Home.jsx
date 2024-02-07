@@ -49,7 +49,7 @@ const Home = () => {
 
 
 
-      <div className='container_pages' >
+      <div className='container_pages p-3' >
         {
           headerLink === "comprarTodo" ?
             <div className='container_categorias'>
