@@ -29,21 +29,21 @@ const FormEmpleado = ({ isOpenModal, setIsOpenModal, getData, obtenerData, setOb
         console.log(obtenerData);
         console.log(image);
         if (obtenerData) {
-            
-            if(!obtenerData.img){
+
+            if (!obtenerData.img) {
                 data.img = image
-            }else if(obtenerData?.img !== image && obtenerData?.img && !image){
+            } else if (obtenerData?.img !== image && obtenerData?.img && !image) {
                 data.img = obtenerData?.img
                 getData()
-            }else{
+            } else {
                 if (obtenerData?.img !== image) {
                     data.img = image
                     getData()
-                }else{
+                } else {
                     data.img = obtenerData?.img
                     getData()
                 }
-                
+
             }
 
             updateData(data, obtenerData?.id_empleado)
@@ -72,7 +72,7 @@ const FormEmpleado = ({ isOpenModal, setIsOpenModal, getData, obtenerData, setOb
 
 
 
-// console.log(obtenerData.img);
+    // console.log(obtenerData.img);
 
 
     return (
@@ -93,7 +93,7 @@ const FormEmpleado = ({ isOpenModal, setIsOpenModal, getData, obtenerData, setOb
                                 <img src={image} alt="Añadir foto de empleado" />
                                 :
                                 obtenerData ?
-                                    <img src={obtenerData.img? obtenerData?.img: fotoEmpleado} alt="Añadir foto " />
+                                    <img src={obtenerData.img ? obtenerData?.img : fotoEmpleado} alt="Añadir foto " />
                                     :
                                     <img src={fotoEmpleado} alt="Añadir foto de empleado" />
                         }
@@ -204,68 +204,68 @@ export default FormEmpleado
 
 
 
-    //     <form onSubmit={handleSubmit(submit)} className='form'>
-    //     <div onClick={closeForm} className='form_x'>X</div>
-    //     <h2 className='form__title'>
-    //         {updateInfoPlato ? 'Editar plato' : 'Crear plato'}
-    //     </h2>
-    //     <ul className='form__list'>
-    //         <li className='form__item'>
-    //             <label htmlFor="name">Nombre del plato</label>
-    //             <input {...register('name')} type="text" id='name' placeholder='Ingresar nombre del plato' required />
-    //         </li>
-    //         <li className='form__item'>
-    //             <label htmlFor="description"> Descripción</label>
-    //             <textarea className='label_description'  {...register('description')} type="text" id='description' placeholder='Escriba la descripción del plato' required />
-    //         </li>
-    //         <li className='form__item'>
-    //             <label htmlFor="price">Precio</label>
-    //             <input {...register('price')} type="number" id='price' placeholder='Ingresar precio del plato' required />
-    //         </li>
-    //         <li className='form__item'>
-    //             <label htmlFor="time_preparation">Tiempo de preparación</label>
-    //             <input {...register('time_preparation')} type="text" id='time_preparation' placeholder='Ingresar tiempo de preparación' required />
-    //         </li>
+//     <form onSubmit={handleSubmit(submit)} className='form'>
+//     <div onClick={closeForm} className='form_x'>X</div>
+//     <h2 className='form__title'>
+//         {updateInfoPlato ? 'Editar plato' : 'Crear plato'}
+//     </h2>
+//     <ul className='form__list'>
+//         <li className='form__item'>
+//             <label htmlFor="name">Nombre del plato</label>
+//             <input {...register('name')} type="text" id='name' placeholder='Ingresar nombre del plato' required />
+//         </li>
+//         <li className='form__item'>
+//             <label htmlFor="description"> Descripción</label>
+//             <textarea className='label_description'  {...register('description')} type="text" id='description' placeholder='Escriba la descripción del plato' required />
+//         </li>
+//         <li className='form__item'>
+//             <label htmlFor="price">Precio</label>
+//             <input {...register('price')} type="number" id='price' placeholder='Ingresar precio del plato' required />
+//         </li>
+//         <li className='form__item'>
+//             <label htmlFor="time_preparation">Tiempo de preparación</label>
+//             <input {...register('time_preparation')} type="text" id='time_preparation' placeholder='Ingresar tiempo de preparación' required />
+//         </li>
 
-    //         <li className='form__item'>
-    //             <div>
-    //             <div>
-    //             <input
-    //                 type="radio"
-    //                 value="plato"
-    //                 {...register('categories', { required: true })}
-    //             />
-    //             <label>plato</label>
-    //             </div>
+//         <li className='form__item'>
+//             <div>
+//             <div>
+//             <input
+//                 type="radio"
+//                 value="plato"
+//                 {...register('categories', { required: true })}
+//             />
+//             <label>plato</label>
+//             </div>
 
-    //            <div>
-    //            <input
-    //                 type="radio"
-    //                 value="coctel"
-    //                 {...register('categories', { required: true })}
-    //             />
-    //             <label>cocteles</label>
-    //            </div>
+//            <div>
+//            <input
+//                 type="radio"
+//                 value="coctel"
+//                 {...register('categories', { required: true })}
+//             />
+//             <label>cocteles</label>
+//            </div>
 
-    //             <input
-    //                 type="radio"
-    //                 value="bebida"
-    //                 {...register('categories', { required: true })}
-    //             />
-    //             <label>bebidas</label>
-    //             </div>
+//             <input
+//                 type="radio"
+//                 value="bebida"
+//                 {...register('categories', { required: true })}
+//             />
+//             <label>bebidas</label>
+//             </div>
 
-    //         </li>
+//         </li>
 
-    //         <li className='form__item'>
-    //             <label htmlFor="image">Imagen </label>
-    //             <a className='url_img_drive_platoFrom' target="_blank" href="https://drive.google.com/drive/u/1/folders/1l5Q83mlndXD2KipI6PfhJaz5z6pZXcBz">Subir imagen aqui</a>
-    //             <br />
-    //             <input {...register('image')} type="text" id='image' required placeholder='Copiar ID de imagen' />
-    //         </li>
-    //     </ul>
-    //     <button className='form__btn'>{updateInfoPlato ? 'Modificar' : 'Crear'}</button>
-    // </form>
+//         <li className='form__item'>
+//             <label htmlFor="image">Imagen </label>
+//             <a className='url_img_drive_platoFrom' target="_blank" href="https://drive.google.com/drive/u/1/folders/1l5Q83mlndXD2KipI6PfhJaz5z6pZXcBz">Subir imagen aqui</a>
+//             <br />
+//             <input {...register('image')} type="text" id='image' required placeholder='Copiar ID de imagen' />
+//         </li>
+//     </ul>
+//     <button className='form__btn'>{updateInfoPlato ? 'Modificar' : 'Crear'}</button>
+// </form>
 
 
 

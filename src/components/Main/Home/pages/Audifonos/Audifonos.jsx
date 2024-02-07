@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Audifonos = () => {
+const Audifonos = ({data}) => {
   return (
     <div>
 

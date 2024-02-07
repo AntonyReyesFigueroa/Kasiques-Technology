@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
 import ComprarTodo from './pages/ComprarTodo/ComprarTodo'
 import { useState } from 'react'
 import Celulares from './pages/Celulares/Celulares'
 import Audifonos from './pages/Audifonos/Audifonos'
 import Ofertas from './pages/Ofertas/Ofertas'
+import useGet from '../../../Hooks/useGet'
 const Home = () => {
 
   const [headerLink, setHeaderLink] = useState('comprarTodo');
 
+  const { data, getData } = useGet('https://65c2e3fdf7e6ea59682bc40a.mockapi.io/Producto')
 
-  
+  useEffect(() => {
+    getData()
+  }, [data])
+
   const [lapis, setLapis] = useState()
 
   const headerComprarTodo = () => {
@@ -28,20 +33,10 @@ const Home = () => {
   const headerOfertas = () => {
     setHeaderLink('ofertas')
   }
-
-  console.log(headerLink);
+  
 
   return (
     <div>
-
-      {/* <div className='container_header_home'>
-        <ul className='ul_header_home nav nav-tabs d-flex justify-content-start'>
-          <li onClick={ () => setHeaderLink('comprarTodo')} className='li_header_home nav-item'><a className=' nav-link' href="">Comprar todo</a></li>
-          <li onClick={headerCelulares} className='li_header_home nav-item'><a className=' nav-link' href="">Celulares</a></li>
-          <li onClick={headerAudifonos} className='li_header_home nav-item'><a className=' nav-link' href="">Audifonos</a></li>
-          <li onClick={headerOfertas} className='li_header_home nav-item'><a className=' nav-link' href="">Ofertas</a></li>
-        </ul>
-      </div> */}
 
       <div className='nav_header_home'>
         <ul className='ul_header_home'>
@@ -56,21 +51,42 @@ const Home = () => {
 
       <div className='container_pages' >
         {
-          headerLink==="comprarTodo" ?
-            <ComprarTodo />
-            : 
-            headerLink==="celulares" ?
-            <Celulares />
-            : 
-            headerLink==="audifonos" ?
-            <Audifonos />
-            : 
-            headerLink==="ofertas" ?
-            <Ofertas />
-            : 
-            ''
+          headerLink === "comprarTodo" ?
+            <div className='container_categorias'>
+              {
+                data && data.map(data => (
+                  <ComprarTodo
+                  key={data?.id}
+                  data={data}
+                />
+                
+                ))
+              }
+            </div>
+            :
+            headerLink === "celulares" ?
+              <Celulares
+                key={data?.id}
+                data={data}
+              />
+              :
+              headerLink === "audifonos" ?
+                <Audifonos
+                  key={data?.id}
+                  data={data}
+                />
+                :
+                headerLink === "ofertas" ?
+                  <Ofertas
+                    key={data?.id}
+                    data={data}
+                  />
+                  :
+                  ''
         }
       </div>
+
+
 
     </div>
   )

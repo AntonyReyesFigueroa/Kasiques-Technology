@@ -25,11 +25,8 @@ const Header = ({ isOpen, setIsOpen }) => {
             <div className={`nav__links ${isOpen && "open__menu mt-5"} `} onClick={() => setIsOpen(false)} >
                 <li> <Link to='/'>Inicio</Link> </li>
                 <li> <Link to='/sobre-nosotros'>Acerca de</Link> </li>
-                <li> <Link to='*/'>Contacto</Link> </li>
-
-                
-                    
-
+                <li> <Link to='/contacto'>Contacto</Link> </li>     
+                <li> <Link to='/add-product'>Add product</Link> </li>
             </div>
 
 

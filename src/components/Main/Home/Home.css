@@ -26,5 +26,18 @@
 }
 
 .container_pages{
-    color: white;
+    color: rgb(7, 0, 0);
+    background-color: aqua;
+    padding-top: 3 em;
+    padding-bottom: 3 em;
+    
+}
+.container_categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1 em;
+    margin-bottom: 1 em;
 }

@@ -7,8 +7,9 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Main/Home/Home'
 import Sobre_nosotros from './components/Main/SobreNosotros/Sobre_nosotros'
 import Error404 from './components/Error404'
-import comprarTodo from "./components/Main/Home/pages/ComprarTodo/ComprarTodo";
-import Celulares from "./components/Main/Home/pages/Celulares/Celulares";
+import AddProduct from "./components/Main/AddProduct/AddProduct";
+import Contacto from "./components/Main/Contacto/Contacto";
+
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/sobre-nosotros' element={<Sobre_nosotros />} />
+            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/add-product' element={<AddProduct />} />
 
             <Route path='/*' element={<Error404 />} />
           </Routes>

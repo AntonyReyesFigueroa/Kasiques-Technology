@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Ofertas = () => {
+
+const Ofertas = ({data}) => {
   return (
-    <div>
-
-      <h1>Estamos en ofertas</h1>
-
-    </div>
+    <>
+     <div>
+      <h1>Estoy en ofertas</h1>
+     </div>
+    </>
+    
   )
 }
-
+ 
 export default Ofertas

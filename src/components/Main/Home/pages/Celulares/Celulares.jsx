@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Celulares = () => {
+const Celulares = ({data}) => {
   return (
     <div>
 
