@@ -1,8 +1,9 @@
 import React from 'react'
+import './ComprarTodo.css'
 
 const ComprarTodo = () => {
   return (
-    <div>
+    <div className='container_ct'>
 
       <h1>Estamos en comprar todo</h1>
 

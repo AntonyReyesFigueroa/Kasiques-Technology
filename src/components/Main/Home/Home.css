@@ -1,14 +1,30 @@
-.container_header_home{
+.nav_header_home{
     display: flex;
     justify-content: start;
+    margin-top: 3px;
+    width: 100%;
+    background-color: rgb(209, 181, 114);
+    padding-left: 1em;
+    height: 60px;
 }
 
 .ul_header_home{
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.li_header_home>a{
+.li_header_home{
     color: rgb(43, 152, 152);
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container_pages{
+    color: white;
 }
