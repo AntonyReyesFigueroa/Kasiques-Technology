@@ -1,3 +1,17 @@
+
+
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../image/fondo_home.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+
+}
+
+
 .nav_header_home{
     display: flex;
     justify-content: start;
@@ -6,6 +20,7 @@
     background-color: rgb(209, 181, 114);
     padding-left: 1em;
     height: 60px;
+    margin-bottom: 3em;
     
 }
 
@@ -31,13 +46,12 @@
     /* background-color: rgba(108, 0, 215, 0.736); */
     padding-top: 3 em;
     padding-bottom: 3 em;
-    background-image: linear-gradient(to right, rgb(218, 183, 221), rgb(39, 5, 61));
-    
+    background-image: linear-gradient(to right, rgba(218, 183, 221,.5), rgba(39, 5, 61,.5));
     
 }
 .container_categorias{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
    flex-wrap: wrap;

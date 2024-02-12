@@ -3,10 +3,10 @@ import './ComprarTodo.css'
 import fotoProduct from '../../../../../image/addProduct.png'
 
 const ComprarTodo = ({ data }) => {
-  console.log(data);
+
   return (
     
-    <article className='producto'>
+    <article  className='producto_color'>
       <div className="producto__tilte">
         <h3>{data?.nombre}</h3>
       </div>
@@ -24,23 +24,23 @@ const ComprarTodo = ({ data }) => {
         <div className='producto__info'>
           <div className="producto__info-datos">
             <b>Nombre: </b>
-            <p>{data?.nombre} </p>
+            <b>{data?.nombre} </b>
           </div>
 
           <div className="producto__info-datos">
             <b>Precio: </b>
-            <p>{data?.precio} </p>
+            <b>{data?.precio} </b>
           </div>
 
           <div className="producto__info-datos">
             <b>Precio con descuento: </b>
-            <p>{data?.descuento} </p>
+            <b>{data?.descuento} </b>
           </div>
 
 
           <div className="producto__info-datos">
             <b>Descripcion del producto: </b>
-            <p>{data?.descripcion} </p>
+            <b>{data?.descripcion} </b>
           </div>
 
         </div>

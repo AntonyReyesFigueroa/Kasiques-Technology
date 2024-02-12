@@ -1,3 +1,22 @@
 .container_ct{
     color: white;
 }
+
+.producto_color{
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    height: 430px;
+    background-color: rgb(161, 182, 72,.5);
+    padding: 1em;
+    gap: 20px;
+    color: #fff;
+    border-radius: 1em;
+    border-width: 3px;
+    border-color: rgb(208, 203, 203);
+    border-style: solid;
+}
+
+.producto__info-datos{
+    gap: 10px;
+}

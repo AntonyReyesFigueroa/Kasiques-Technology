@@ -36,7 +36,7 @@ const Home = () => {
   
 
   return (
-    <div>
+    <div className='home'>
 
       <div className='nav_header_home'>
         <ul className='ul_header_home'>
@@ -49,7 +49,7 @@ const Home = () => {
 
 
 
-      <div className='container_pages p-3' >
+      <div className='container_page' >
         {
           headerLink === "comprarTodo" ?
             <div className='container_categorias'>
@@ -65,22 +65,52 @@ const Home = () => {
             </div>
             :
             headerLink === "celulares" ?
-              <Celulares
-                key={data?.id}
-                data={data}
-              />
+            <div className='container_categorias'>
+            {
+              data && data.map(data => (
+               data.categoria==='Celulares'?
+               <ComprarTodo
+               key={data?.id}
+               data={data}
+             />
+             :
+             null
+              
+              ))
+            }
+          </div>
               :
               headerLink === "audifonos" ?
-                <Audifonos
-                  key={data?.id}
-                  data={data}
-                />
+              <div className='container_categorias'>
+              {
+                data && data.map(data => (
+                 data.categoria==='Audifonos'?
+                 <ComprarTodo
+                 key={data?.id}
+                 data={data}
+               />
+               :
+               null
+                
+                ))
+              }
+            </div>
                 :
                 headerLink === "ofertas" ?
-                  <Ofertas
-                    key={data?.id}
-                    data={data}
-                  />
+                <div className='container_categorias'>
+                {
+                  data && data.map(data => (
+                   data.categoria==='Ofertas'?
+                   <ComprarTodo
+                   key={data?.id}
+                   data={data}
+                 />
+                 :
+                 null
+                  
+                  ))
+                }
+              </div>
                   :
                   ''
         }
