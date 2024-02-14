@@ -38,6 +38,10 @@ const Home = () => {
     setHeaderLink('Calculadoras')
   }
 
+  const mouse = () => {
+    setHeaderLink('mouse')
+  }
+
   
   const Tomacorrientes_Estabilizadoresrtas = () => {
     setHeaderLink('Tomacorrientes_Estabilizadoresrtas')
@@ -63,6 +67,7 @@ const Home = () => {
           <li onClick={Calculadoras} className='li_header_home'>Calculadoras</li>
           <li onClick={Tomacorrientes_Estabilizadoresrtas} className='li_header_home'>Tomacorrientes/Estabilizadores</li>
           <li onClick={Bombillas} className='li_header_home'>Bombillas</li>
+          <li onClick={mouse} className='li_header_home'>Mouse</li>
         </ul>
       </div>
 
@@ -178,6 +183,22 @@ const Home = () => {
                             ))
                           }
                         </div>
+                         :
+                         headerLink === "mouse" ?
+                           <div className='container_categorias'>
+                             {
+                               data && data.map(data => (
+                                 data.categoria === 'mouse' ?
+                                   <ComprarTodo
+                                     key={data?.id}
+                                     data={data}
+                                   />
+                                   :
+                                   null
+   
+                               ))
+                             }
+                           </div>
                         :
 
                         ''
