@@ -8,7 +8,7 @@ const ComprarTodo = ({ data }) => {
     
     <article  className='producto_color'>
       <div className="producto__tilte">
-        <h3>{data?.nombre}</h3>
+        <h3 style={{fontSize:'20px', fontWeight:900}}>{data?.nombre}</h3>
       </div>
 
       <div className='container_producto-info'>
