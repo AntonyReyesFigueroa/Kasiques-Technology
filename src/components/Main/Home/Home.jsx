@@ -52,6 +52,11 @@ const Home = () => {
     setHeaderLink('Bombillas')
   }
 
+  const Microfono = () => {
+    setHeaderLink('Microfono')
+  }
+
+
 
   console.log(headerLink);
 
@@ -63,6 +68,7 @@ const Home = () => {
           <li onClick={Sin_categoria}   className='li_header_home'>Sin categoria</li>
           <li onClick={Adaptadores} className='li_header_home'>Adaptadores</li>
           <li onClick={Audifonos_inalambricos} className='li_header_home'>Audifonos inalambricos</li>
+          <li onClick={Microfono} className='li_header_home'>Microfono</li>
           <li onClick={Cables} className='li_header_home'>Cables</li>
           <li onClick={Calculadoras} className='li_header_home'>Calculadoras</li>
           <li onClick={Tomacorrientes_Estabilizadoresrtas} className='li_header_home'>Tomacorrientes/Estabilizadores</li>
@@ -200,6 +206,22 @@ const Home = () => {
                              }
                            </div>
                         :
+                        headerLink === "Microfono" ?
+                        <div className='container_categorias'>
+                          {
+                            data && data.map(data => (
+                              data.categoria === 'Microfono' ?
+                                <ComprarTodo
+                                  key={data?.id}
+                                  data={data}
+                                />
+                                :
+                                null
+
+                            ))
+                          }
+                        </div>
+                     :
 
                         ''
         }

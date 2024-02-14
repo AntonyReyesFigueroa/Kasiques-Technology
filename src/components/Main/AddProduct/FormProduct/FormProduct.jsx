@@ -174,6 +174,12 @@ const FormProduct = ({ isOpenModal, setIsOpenModal, getData, obtenerData, setObt
                                     <input type="radio" {...register('categoria', { required: true })} value="mouse" />
                                     Mouse
                                 </label>
+
+                                <label>
+                                    <input type="radio" {...register('categoria', { required: true })} value="Microfono" />
+                                    Microfono
+                                </label>
+
                             </li>
 
                         </div>
