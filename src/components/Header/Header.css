@@ -166,7 +166,10 @@ a {
 
     .nav__links {
         display: none;
-        background-color: rgb(117, 198, 151);
+        background-color: red;
+        padding-top: 0;
+        margin-top: 0;
+
         /* width: 200px; */
         /* margin: auto 0 auto auto; */
     }
@@ -256,6 +259,8 @@ a {
         padding: 5px;
         color: rgb(7, 7, 7);
     }
+
+
 
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Header.css'
 import logo from '../../image/logo.png'
+import userDefault from '../../image/user_img.avif'
 import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
@@ -59,6 +60,18 @@ const Header = ({ isOpen, setIsOpen }) => {
                     }
 
                 </div>
+
+                {
+                    isLoading ?
+                        <p>cargando...</p>
+                        :
+
+                        isAuthenticated ?
+                            <img className='ocultar' src={user?.picture} alt={user.name} />
+                            :
+                            <img className='ocultar' src={userDefault} alt="" />
+
+                }
 
             </div>
         </nav>

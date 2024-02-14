@@ -33,17 +33,20 @@ const Home = () => {
   const headerOfertas = () => {
     setHeaderLink('ofertas')
   }
-  
+
 
   return (
     <div className='home'>
 
       <div className='nav_header_home'>
         <ul className='ul_header_home'>
-          <li onClick={headerComprarTodo} className='li_header_home'>Comprar todo</li>
-          <li onClick={headerCelulares} className='li_header_home'>Celulares</li>
-          <li onClick={headerAudifonos} className='li_header_home'>Audifonos</li>
-          <li onClick={headerOfertas} className='li_header_home'>Ofertas</li>
+          <li onClick={headerComprarTodo} className='li_header_home'>Sin categoria</li>
+          <li onClick={headerCelulares} className='li_header_home'>Adaptadores</li>
+          <li onClick={headerAudifonos} className='li_header_home'>Audifonos inalambricos</li>
+          <li onClick={headerOfertas} className='li_header_home'>Cables</li>
+          <li onClick={headerOfertas} className='li_header_home'>Calculadoras</li>
+          <li onClick={headerOfertas} className='li_header_home'>Tomacorrientes/Estabilizadores</li>
+          <li onClick={headerOfertas} className='li_header_home'>Bombillas</li>
         </ul>
       </div>
 
@@ -51,68 +54,117 @@ const Home = () => {
 
       <div className='container_page' >
         {
-          headerLink === "comprarTodo" ?
+          headerLink === "Sin_categoria" ?
             <div className='container_categorias'>
               {
                 data && data.map(data => (
                   <ComprarTodo
-                  key={data?.id}
-                  data={data}
-                />
-                
+                    key={data?.id}
+                    data={data}
+                  />
+
                 ))
               }
             </div>
             :
-            headerLink === "celulares" ?
-            <div className='container_categorias'>
-            {
-              data && data.map(data => (
-               data.categoria==='Celulares'?
-               <ComprarTodo
-               key={data?.id}
-               data={data}
-             />
-             :
-             null
-              
-              ))
-            }
-          </div>
-              :
-              headerLink === "audifonos" ?
+            headerLink === "Adaptadores" ?
               <div className='container_categorias'>
-              {
-                data && data.map(data => (
-                 data.categoria==='Audifonos'?
-                 <ComprarTodo
-                 key={data?.id}
-                 data={data}
-               />
-               :
-               null
-                
-                ))
-              }
-            </div>
-                :
-                headerLink === "ofertas" ?
-                <div className='container_categorias'>
                 {
                   data && data.map(data => (
-                   data.categoria==='Ofertas'?
-                   <ComprarTodo
-                   key={data?.id}
-                   data={data}
-                 />
-                 :
-                 null
-                  
+                    data.categoria === 'Adaptadores' ?
+                      <ComprarTodo
+                        key={data?.id}
+                        data={data}
+                      />
+                      :
+                      null
+
                   ))
                 }
               </div>
+              :
+              headerLink === "Audifonos_inalambricos" ?
+                <div className='container_categorias'>
+                  {
+                    data && data.map(data => (
+                      data.categoria === 'Audifonos_inalambricos' ?
+                        <ComprarTodo
+                          key={data?.id}
+                          data={data}
+                        />
+                        :
+                        null
+
+                    ))
+                  }
+                </div>
+                :
+                headerLink === "Cables" ?
+                  <div className='container_categorias'>
+                    {
+                      data && data.map(data => (
+                        data.categoria === 'Cables' ?
+                          <ComprarTodo
+                            key={data?.id}
+                            data={data}
+                          />
+                          :
+                          null
+
+                      ))
+                    }
+                  </div>
                   :
-                  ''
+                  headerLink === "Calculadoras" ?
+                    <div className='container_categorias'>
+                      {
+                        data && data.map(data => (
+                          data.categoria === 'Calculadoras' ?
+                            <ComprarTodo
+                              key={data?.id}
+                              data={data}
+                            />
+                            :
+                            null
+
+                        ))
+                      }
+                    </div>
+                    :
+                    headerLink === "Tomacorrientes_Estabilizadoresrtas" ?
+                      <div className='container_categorias'>
+                        {
+                          data && data.map(data => (
+                            data.categoria === 'Tomacorrientes_Estabilizadoresrtas' ?
+                              <ComprarTodo
+                                key={data?.id}
+                                data={data}
+                              />
+                              :
+                              null
+
+                          ))
+                        }
+                      </div>
+                      :
+                      headerLink === "Bombillas" ?
+                        <div className='container_categorias'>
+                          {
+                            data && data.map(data => (
+                              data.categoria === 'Bombillas' ?
+                                <ComprarTodo
+                                  key={data?.id}
+                                  data={data}
+                                />
+                                :
+                                null
+
+                            ))
+                          }
+                        </div>
+                        :
+
+                        ''
         }
       </div>
 

@@ -19,7 +19,7 @@
     width: 100%;
     background-color: rgb(209, 181, 114);
     padding-left: 1em;
-    height: 60px;
+    height: max-content;
     margin-bottom: 3em;
     
 }
@@ -29,16 +29,17 @@
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
     cursor: pointer;
+    /* background-color: red; */
+    width: 100%;
 }
 
 .li_header_home{
     color: rgb(4, 4, 4);
-    width: 95px;
+    width: max-content;
     display: flex;
     justify-content: center;
-    
+    margin: 1em;
 }
 
 .container_pages{
