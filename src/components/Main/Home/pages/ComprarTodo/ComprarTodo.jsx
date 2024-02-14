@@ -12,7 +12,7 @@ const ComprarTodo = ({ data }) => {
       </div>
 
       <div className='container_producto-info'>
-        <div className='producto__img'>
+        <div className='producto__image'>
           {
             data?.imagen ?
               <img src={data?.imagen} alt={data?.nombre} />
@@ -22,25 +22,15 @@ const ComprarTodo = ({ data }) => {
         </div>
 
         <div className='producto__info'>
-          <div className="producto__info-datos">
-            <b>Nombre: </b>
-            <b>{data?.nombre} </b>
-          </div>
 
-          <div className="producto__info-datos">
-            <b>Precio: </b>
+          <div className="producto__info-datoss">
+            <b>Precio antes: </b>
             <b>s/ {data?.precio} </b>
           </div>
 
-          <div className="producto__info-datos">
-            <b>Precio con descuento: </b>
+          <div className="producto__info-datoss">
+            <b>Precio: </b>
             <b>s/ {data?.descuento} </b>
-          </div>
-
-
-          <div className="producto__info-datos">
-            <b>Descripcion del producto: </b>
-            <b>{data?.descripcion} </b>
           </div>
 
         </div>

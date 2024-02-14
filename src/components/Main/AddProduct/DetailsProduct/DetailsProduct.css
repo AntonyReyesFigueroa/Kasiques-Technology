@@ -1,17 +1,15 @@
 .producto {
     display: flex;
     flex-direction: column;
-    max-width: 470px;
-    height: 430px;
-    background-color: rgb(103, 144, 156);
+    width: 300px;
+    height: 700px;
     padding: 1em;
     gap: 20px;
-    color: #fff;
+    color: #151515;
     border-radius: 1em;
     border-width: 3px;
-    border-color: rgb(208, 203, 203);
-    border-style: solid;
-    background-image: linear-gradient(to right, rgb(6, 27, 27), rgb(42, 128, 109));
+    box-shadow: 0px 10px 10px rgb(79, 79, 79);
+    background-image: linear-gradient(to right, rgba(6, 27, 27,.1), rgba(42, 128, 109,.1));
 }
 
 .producto__tilte {
@@ -21,7 +19,6 @@
 .container_producto-info {
     /* border: 1px solid white; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
     flex-wrap: wrap;
     max-width: max-content;
@@ -41,8 +38,7 @@
 }
 
 .producto__img>img {
-    width: 90%;
-    height: 90%;
+    width: 200px;
     object-fit: cover;
     border-radius: 1em;
 }

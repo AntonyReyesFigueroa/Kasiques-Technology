@@ -5,21 +5,29 @@
 .producto_color{
     display: flex;
     flex-direction: column;
-    max-width: 470px;
-    height: 430px;
-    background-color: rgb(161, 182, 72,.5);
+    width:280px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 1em;
-    gap: 20px;
-    color: #fff;
+    color: #1d234d;
     border-radius: 1em;
     border-width: 3px;
-    border-style: solid;
     margin-bottom: 1em;
     margin-top: 1em;
-    box-shadow: 8px 5px 8px rgb(73, 71, 71);
-    border: 1px solid black;
+    box-shadow: 8px 5px 10px rgb(73, 71, 71);
 }
 
-.producto__info-datos{
+.producto__info-datoss{
     gap: 10px;
+    margin: auto;
+    color: black;
+}
+
+.producto__info-datoss:nth-child(1)>b:nth-child(2){
+    text-decoration: line-through;
+}
+
+.producto__image>img{
+    width: 200px;
+    height: 200px;
 }

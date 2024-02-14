@@ -18,35 +18,51 @@ const Home = () => {
 
   const [lapis, setLapis] = useState()
 
-  const headerComprarTodo = () => {
-    setHeaderLink('comprarTodo')
+  const Sin_categoria = () => {
+    setHeaderLink('Sin_categoria')
   }
 
-  const headerCelulares = () => {
-    setHeaderLink('celulares')
+  const Adaptadores = () => {
+    setHeaderLink('Adaptadores')
   }
 
-  const headerAudifonos = () => {
-    setHeaderLink('audifonos')
+  const Audifonos_inalambricos = () => {
+    setHeaderLink('Audifonos_inalambricos')
   }
 
-  const headerOfertas = () => {
-    setHeaderLink('ofertas')
+  const Cables = () => {
+    setHeaderLink('Cables')
   }
 
+  const Calculadoras = () => {
+    setHeaderLink('Calculadoras')
+  }
+
+  
+  const Tomacorrientes_Estabilizadoresrtas = () => {
+    setHeaderLink('Tomacorrientes_Estabilizadoresrtas')
+  }
+
+  
+  const Bombillas = () => {
+    setHeaderLink('Bombillas')
+  }
+
+
+  console.log(headerLink);
 
   return (
     <div className='home'>
 
       <div className='nav_header_home'>
         <ul className='ul_header_home'>
-          <li onClick={headerComprarTodo} className='li_header_home'>Sin categoria</li>
-          <li onClick={headerCelulares} className='li_header_home'>Adaptadores</li>
-          <li onClick={headerAudifonos} className='li_header_home'>Audifonos inalambricos</li>
-          <li onClick={headerOfertas} className='li_header_home'>Cables</li>
-          <li onClick={headerOfertas} className='li_header_home'>Calculadoras</li>
-          <li onClick={headerOfertas} className='li_header_home'>Tomacorrientes/Estabilizadores</li>
-          <li onClick={headerOfertas} className='li_header_home'>Bombillas</li>
+          <li onClick={Sin_categoria}   className='li_header_home'>Sin categoria</li>
+          <li onClick={Adaptadores} className='li_header_home'>Adaptadores</li>
+          <li onClick={Audifonos_inalambricos} className='li_header_home'>Audifonos inalambricos</li>
+          <li onClick={Cables} className='li_header_home'>Cables</li>
+          <li onClick={Calculadoras} className='li_header_home'>Calculadoras</li>
+          <li onClick={Tomacorrientes_Estabilizadoresrtas} className='li_header_home'>Tomacorrientes/Estabilizadores</li>
+          <li onClick={Bombillas} className='li_header_home'>Bombillas</li>
         </ul>
       </div>
 
@@ -54,7 +70,7 @@ const Home = () => {
 
       <div className='container_page' >
         {
-          headerLink === "Sin_categoria" ?
+          headerLink === 'Sin_categoria' ?
             <div className='container_categorias'>
               {
                 data && data.map(data => (
