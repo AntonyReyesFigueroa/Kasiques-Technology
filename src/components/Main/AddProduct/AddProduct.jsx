@@ -12,10 +12,6 @@ const AddProduct = () => {
 
   const { data, getData } = useGet('https://65c2e3fdf7e6ea59682bc40a.mockapi.io/Producto')
 
-  // console.log(data);
-
-
-
   useEffect(() => {
     getData()
   }, [isOpenModal])

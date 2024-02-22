@@ -70,11 +70,6 @@ const FormEmpleado = ({ isOpenModal, setIsOpenModal, getData, obtenerData, setOb
     }, [obtenerData])
 
 
-
-
-    // console.log(obtenerData.img);
-
-
     return (
         <form onSubmit={handleSubmit(submit)} className='form__container'>
             <div className='form'>

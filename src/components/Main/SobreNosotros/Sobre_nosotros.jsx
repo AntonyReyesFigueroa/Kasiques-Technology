@@ -4,6 +4,14 @@ import ftDelivery from '../../../image/delivery.png'
 import ftCambios from '../../../image/Camdevoluciones.jpg'
 import ftPromos from '../../../image/promo.png'
 import ftAtencion from '../../../image/horario.jpeg'
+import ftmApple from '../../../image/imgmarcas/aple.png'
+import ftmsamsung from '../../../image/imgmarcas/samsung.png'
+import ftmsoni from '../../../image/imgmarcas/soni.png'
+import ftmewwto from '../../../image/imgmarcas/ewwtoo.png'
+import ftmjbl from '../../../image/imgmarcas/jbll.png'
+import ftmlevono from '../../../image/imgmarcas/lenovoo.png'
+import ftmwireles from '../../../image/imgmarcas/wireles.png'
+import ftmromax from '../../../image/imgmarcas/romax.png'
 
 const Sobre_nosotros = () => {
   return (
@@ -20,7 +28,7 @@ const Sobre_nosotros = () => {
           </div>
         </div>
 
-        <div className="card text-center w-4" >
+        <div className="card text-center " >
           <div className="card-body">
             <h1 className="card-title">Visión:</h1>
             <p className="card-text">Ser reconocidos como una empresa líder en la venta y suministro de productos tecnológicos, ofreciendo soluciones integrales y con garantía de calidad.</p>
@@ -31,7 +39,7 @@ const Sobre_nosotros = () => {
       </div>
 
       <div>
-        <h3 className='title_about'>Nuestros servicios</h3>
+        <h3 className='title_about text-center'>Nuestros servicios</h3>
 
         <div className="row">
           <div className="col-sm-3">
@@ -70,14 +78,16 @@ const Sobre_nosotros = () => {
       </div>
 
       <div>
-        <h1>Nuestras marcas</h1>
+        <h3 className='text-center'>Nuestras marcas</h3>
         <div className="row d-flex justify-content-between">
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
-          <div className="col-sm-3"><img src={ftAcercaDe} alt="" /></div>
+          <div className="col-sm-3"><img src={ftmApple}alt="" width={150} /></div>
+          <div className="col-sm-3"><img src={ftmsamsung} alt="" width={150}/></div>
+          <div className="col-sm-3"><img src={ftmsoni} alt=""  width={150}/></div>
+          <div className="col-sm-3"><img src={ftmromax} alt=""  width={150}/></div>
+          <div className="col-sm-3"><img src={ftmlevono} alt=""  width={150}/></div>
+          <div className="col-sm-3"><img src={ftmjbl} alt=""  width={150}/></div>
+          <div className="col-sm-3"><img src={ftmewwto} alt=""  width={150}/></div>
+          <div className="col-sm-3"><img src={ftmwireles} alt=""  width={150}/></div>
         </div>
       </div>
 
