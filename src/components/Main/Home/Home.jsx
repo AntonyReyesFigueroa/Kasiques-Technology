@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Home.css'
 import ComprarTodo from './pages/ComprarTodo/ComprarTodo'
 import { useState } from 'react'
-
+import { Whatsapp } from 'react-bootstrap-icons';
 
 
 
@@ -67,10 +67,15 @@ const Home = () => {
   const handleInputChange = (event) => {
     setInputValue(event.target.value); // Actualiza el estado con el valor del input
   };
-  
+
 
   return (
     <div className='home'>
+
+      <b>
+        <a href="https://api.whatsapp.com/send?phone=51930702459&text=https://kasiques-technology.netlify.app/%0AHola,%20estoy%20interesado%20deseo%20obtener%20más%20información%20" target="_blank" rel="noopener noreferrer">
+          <div className='contactanos_flotante'><Whatsapp color="rgb(86, 253, 108)" size={24} />Contactanos</div> </a>
+      </b>
 
       <div className='nav_header_home'>
         <ul className='ul_header_home'>

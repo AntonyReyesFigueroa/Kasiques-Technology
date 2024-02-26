@@ -3,13 +3,7 @@ import './ComprarTodo.css'
 import fotoProduct from '../../../../../image/addProduct.png'
 
 const ComprarTodo = ({ data, inputValue }) => {
-  // console.log(inputValue);
-
-
-
-
-
-
+ 
   if (Array.isArray(data)) {
     const filteredProducts = data && data?.filter(product =>
       product.nombre.toLowerCase().includes(inputValue.toLowerCase()));
