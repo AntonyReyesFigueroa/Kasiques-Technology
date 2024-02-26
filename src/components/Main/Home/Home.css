@@ -1,7 +1,7 @@
 
 
 .home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../image/fondo_home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../image/Fondo.jpg');
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -26,7 +26,7 @@
 
 .ul_header_home{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     cursor: pointer;
@@ -40,23 +40,81 @@
     display: flex;
     justify-content: center;
     margin: 1em;
+    padding: 0 1em 0 1em;
+    border-radius: 1em;
+}
+
+.li_header_home:hover{
+    background-color: rgb(52, 89, 175);
+    color: white !important;
+}
+
+.home__buscador{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+}
+
+
+.home__buscador>input{
+    width: 300px;
+    height: 40px;
+    border-radius: 1em;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding-left: 15px;
+    font-size: 24px;
+}
+
+.home__buscador>input:focus{
+    color: black;
+    font-weight: 900;
+    background-color: rgba(195, 187, 187, 0.6);
 }
 
 .container_pages{
 
     background-image: linear-gradient(to right, rgba(218, 183, 221,.5), rgba(39, 5, 61,.5));
     padding-bottom: 2em;
+
 }
 .container_categorias{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-   flex-wrap: wrap;
-    margin-top: 1 em;
-    margin-bottom: 1 em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 400px;
+    grid-gap: 40px;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 .container_page{
     padding-bottom: 5em;
+    max-width: 2000px;
+    margin: auto;
 }
+
+
+
+@media only screen and (max-width:1500px) {
+    .container_categorias{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+}
+
+
+@media only screen and (max-width:1020px) {
+    .container_categorias{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .container_categorias{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}
+
+
+
