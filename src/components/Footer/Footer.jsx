@@ -16,18 +16,18 @@ const Footer = () => {
                 <b>
                     <a className='s' href="https://www.facebook.com/profile.php?id=61555908626822" target="_blank" rel="noopener noreferrer">
 
-                        <i className="fab fa-facebook"></i> @kasiquesTechnology
+                        <i className="fab fa-facebook"></i>
 
                     </a>
                 </b>
                 <b>
                     <a className='s' href="https://www.tiktok.com/@kasiquestechnology?_t=8jCSK1rMpa1&_r=1" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-tiktok"></i> @kasiquesTechnology
+                        <i className="fab fa-tiktok"></i> 
                     </a>
                 </b>
                 <b>
                     <a className='s' href="https://www.instagram.com/kasiquestechnology/" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-instagram"></i> @kasiquesTechnology
+                        <i className="fab fa-instagram"></i> 
                     </a>
                 </b>
             </div>

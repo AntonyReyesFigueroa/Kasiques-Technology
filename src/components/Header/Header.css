@@ -2,7 +2,7 @@ ul,
 li,
 a {
     all: unset;
-    color: rgb(146, 62, 62);
+    color: white;
 }
 
 .nav__logo>img {
@@ -27,7 +27,7 @@ a {
 
 @media only screen and (min-width: 769px) {
     .nav {
-        background-color: rgb(209, 181, 114);
+        background-color: #317079;
         height: 80px;
         display: grid;
         grid-template-columns: .4fr 1fr 250px;
@@ -48,19 +48,32 @@ a {
 
     .nav__logo>img {
         margin: 5px 10px 5px 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        height: 70px;
+        /*margin-top: 5px;*/
+        /*margin-bottom: 5px;*/
+        /*height: 70px;*/
+        height: 60px;
         width: auto!important;
+        transition: all 0.3s;
+    }
+
+    .nav__logo>img:hover {
+        transform: scale(1.2);
     }
 
     .nav__logo> p{
-        height: 100%;
+        margin: 2px 0 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 20px;
-        color: rgb(146, 62, 62);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /*height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: rgb(146, 62, 62);*/
     }
 
     .nav__links {
@@ -75,12 +88,33 @@ a {
     .nav__links li {
         width: 120px;
         height: max-content;
+        margin-right: 30px;
         /* border: 1px solid red; */
         text-align: center;
         font-size: 15px;
-        font-family: "Playfair Display", Georgia, serif;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /*font-family: "Playfair Display", Georgia, serif;*/
     }
 
+    .nav__links li a{
+        display: block;
+        color:white;
+        font-size: 18px;
+        border-radius: 50px;
+        transition: 0.2s;
+        margin: 0 10px;
+        text-decoration: none;
+    } 
+
+    .nav__links li a:hover{
+        color: black;
+        background: white;
+    }
+    
+    .nav__links li a.active {
+        color: black;
+        background: white;
+    }
 
     .nav__user {
         /* background-color: #fff; */
@@ -103,6 +137,7 @@ a {
         width: 190px;
         text-align: center;
         margin: auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .nav__user-datos>button {
@@ -111,8 +146,8 @@ a {
     }
 
     button {
-        background-color: black;
-        color: #4e9973;
+        background-color: white;
+        color: black;
         border-radius: 5em;
         cursor: pointer;
     }
@@ -132,9 +167,6 @@ a {
 }
 
 
-
-
-
 @media only screen and (min-width: 1400px) {
 
     .nav__logo>img {
@@ -143,18 +175,29 @@ a {
 
     .nav__logo>p {
         font-size: 25px;
+        
     }
    
 }
 
 
 @media only screen and (max-width: 768px) {
-    .nav__logo>img {
-        width: 75px;
+
+    .nav__logo img {
+        width: 70px;
+        padding: 0 0 0 10px;
+        transition: all 0.3s;
+        /*border-radius: 45%;*/
+    }
+
+    .nav__logo>img:hover {
+        transform: scale(1.2);
     }
 
     .nav__logo > p{
         font-size:10px;
+        padding: 10px 0 0 0;
+        color: white;
     }
 
     .nav__user>img {
@@ -163,10 +206,13 @@ a {
         border-radius: 50%;
     }
 
+    .nav__user p{
+        color: white;
+    }
 
     .nav__links {
         display: none;
-        background-color: red;
+        background-color: #317079;
         padding-top: 0;
         margin-top: 0;
 
@@ -191,6 +237,7 @@ a {
     }
 
     .nav_toogle {
+        padding: 0 3% 0 0;
         display: flex !important;
         flex-direction: column;
         margin: 15px;
@@ -201,7 +248,7 @@ a {
     .nav_toogle span {
         width: 30px;
         height: 4px;
-        background: rgb(198, 62, 62);
+        background: white;
         margin-bottom: 5px;
         border-radius: 2px;
         transform-origin: 5px 0px;
@@ -237,19 +284,19 @@ a {
         grid-template-columns: .4fr 1fr 50px;
         grid-template-rows: 85px;
         justify-content: space-between;
-        background-color: rgb(195, 155, 104);
+        background-color: #317079;
         padding-top: 4px;
         padding-bottom: 4px;
         height: 80px;
     }
 
     .nav__logo>p {
-        font-family: var(--titulo1);
-        font-size: 4vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /*font-family: var(--titulo1);*/
+        font-size: 25px
     }
 
     .open__menu {
-        display: block;
         display: flex;
         flex-direction: column;
     }
@@ -258,6 +305,8 @@ a {
         margin: auto;
         padding: 5px;
         color: rgb(7, 7, 7);
+        font-size: 80px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
 

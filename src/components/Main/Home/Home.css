@@ -100,13 +100,22 @@
     }
 
     .ul_header_home {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr); */
     }
 
     .nav_header_home {
         background-color: rgba(255, 255, 255, 0.9);
     }
+}
+
+@media only screen and (max-width:1200px) {
+
+    .ul_header_home {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
 
 
