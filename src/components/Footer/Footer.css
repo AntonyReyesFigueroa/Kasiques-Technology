@@ -5,11 +5,15 @@ a{
 
 @media only screen and (min-width: 769px) {
     .footer {
-        background-color: rgb(8, 8, 28);
+        background-color: #317079;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 90px;
         color: #fff;
+    }
+
+    .footer__section b{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .footer__section {
@@ -18,6 +22,15 @@ a{
         justify-content: center;
         align-items: center;
         gap: 10px;
+    }
+
+    .footer__section a i {
+        font-size: 40px; /* Puedes ajustar el tamaño según tu preferencia */
+        transition: all 0.3s;
+    }
+
+    .footer__section a i:hover {
+        transform: scale(1.2);
     }
 
     .footer__section b {
@@ -39,7 +52,7 @@ a{
 
     .footer__section:nth-child(2) >  b {
         /* background-color: blue; */
-        width: 180px;
+        width: 18px;
         text-align: center;
     }
 
@@ -59,9 +72,22 @@ a{
     .footer {
         display: grid;
         grid-template-rows: 90px 60px 70px ;
-        background-color: rgb(26, 6, 6);
+        background-color:#317079;
         color: #fff;
         /* width: 100vw; */
+    }
+
+    .footer__section a i {
+        font-size: 30px; /* Puedes ajustar el tamaño según tu preferencia */
+        transition: all 0.3s;
+    }
+
+    .footer__section a i:hover {
+        transform: scale(1.2);
+    }
+
+    .footer__section b{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .footer__section {
