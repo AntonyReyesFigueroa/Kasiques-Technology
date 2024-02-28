@@ -25,8 +25,8 @@ const Sobre_nosotros = () => {
         <h3 className='title_acerca text-center'>   Kasiques Technology</h3>
 
         <div className="row mt-5">
-          <div className="col-md-4">
-            <Card.Img variant="top" src={ftAcercaDe} alt="Imagen" />
+          <div className="col-md-4 card-img">
+            <Card.Img variant="top" src={ftAcercaDe} alt="Imagen"  width={100} height={400}/>
           </div>
           <div className="col-md-8">
 
@@ -94,7 +94,7 @@ const Sobre_nosotros = () => {
         </div>
 
         <div>
-          <h3 className='text-center'>Nuestras marcas</h3>
+          <h3 className='text-center text-marcas'>Nuestras marcas</h3>
           <div className="row d-flex justify-content-between">
             <div className="col-sm-3"><img src={ftmApple} alt="" width={150} /></div>
             <div className="col-sm-3"><img src={ftmsamsung} alt="" width={150} /></div>
