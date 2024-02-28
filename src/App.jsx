@@ -16,7 +16,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 function App() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { loginWithRedirect, isAuthenticated, isLoading, logout, user } = useAuth0();
+  const {  user } = useAuth0();
 
   console.log(user?.email);
 

@@ -31,7 +31,12 @@ const Header = ({ isOpen, setIsOpen }) => {
                 {
 
                     // isAuthenticated === 'areyesf20_2@unc.edu.pe'?
-                    isAuthenticated?
+                    user?.email === 'jdelacruzp20_2@unc.edu.pe'
+                    ||  user?.email === 'areyesf20_2@unc.edu.pe'
+                    ||  user?.email === 'eabantov20_1@unc.edu.pe'
+                    ||  user?.email === 'agarciac20_2@unc.edu.pe'
+                    ||  user?.email === 'ycaruajulcad20_2@unc.edu.pe'
+                    ?
                         <li> <Link to='/add-product'>Add product</Link> </li>
                         :
                         ''
