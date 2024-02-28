@@ -21,6 +21,8 @@
 .card-img {
     width: 30%;
     margin-left: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card-body {
@@ -53,6 +55,10 @@
 
 .text-marcas {
     color: aliceblue;
+}
+
+#container-card{
+    z-index: 1;
 }
 
 

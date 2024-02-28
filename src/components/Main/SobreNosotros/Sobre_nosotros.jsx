@@ -28,7 +28,7 @@ const Sobre_nosotros = () => {
           <div className="col-md-4 card-img">
             <Card.Img variant="top" src={ftAcercaDe} alt="Imagen"  width={100} height={400}/>
           </div>
-          <div className="col-md-8">
+          <div id='container-card' className="col-md-8 ">
 
             <Card>
               <Card.Body>
