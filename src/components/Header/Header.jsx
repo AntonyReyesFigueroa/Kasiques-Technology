@@ -9,6 +9,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
     const { loginWithRedirect, isAuthenticated, isLoading, logout, user } = useAuth0();
 
+
     return (
         <nav className='nav'>
             <div className='nav__logo'>
@@ -26,8 +27,17 @@ const Header = ({ isOpen, setIsOpen }) => {
             <div className={`nav__links ${isOpen && "open__menu mt-5"} `} onClick={() => setIsOpen(false)} >
                 <li> <Link to='/'>Inicio</Link> </li>
                 <li> <Link to='/sobre-nosotros'>Acerca de</Link> </li>
-                <li> <Link to='/contacto'>Contacto</Link> </li>     
-                <li> <Link to='/add-product'>Add product</Link> </li>
+                <li> <Link to='/contacto'>Contacto</Link> </li>
+                {
+
+                    // isAuthenticated === 'areyesf20_2@unc.edu.pe'?
+                    isAuthenticated?
+                        <li> <Link to='/add-product'>Add product</Link> </li>
+                        :
+                        ''
+                }
+
+
             </div>
 
 
@@ -65,11 +75,15 @@ const Header = ({ isOpen, setIsOpen }) => {
                     isLoading ?
                         <p>cargando...</p>
                         :
-
                         isAuthenticated ?
-                            <img className='ocultar' src={user?.picture} alt={user.name} />
+                            // <img src={user?.picture} alt="" className="ocultar" />
+                            <img src={logo} alt="" className="ocultar" />
                             :
-                            <img className='ocultar' src={userDefault} alt="" />
+
+                            isAuthenticated ?
+                                <img className='ocultar' src={user?.picture} alt={user.name} />
+                                :
+                                <img className='ocultar' src={userDefault} alt="" />
 
                 }
 
