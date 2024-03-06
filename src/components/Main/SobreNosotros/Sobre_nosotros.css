@@ -14,11 +14,6 @@
   z-index: -1;
 }
 
-.title_acerca,
-.title_about,
-.text-marcas {
-  color: #333;
-}
 
 .card {
   border: 4px solid #00BFFF;
@@ -51,7 +46,7 @@
   flex-wrap: wrap;
   padding: 15px;
   z-index: 1;
-  background-color: #4489b2;
+  background-color: #387f78;
 }
 
 #container-card {
@@ -65,7 +60,7 @@
 }
 
 .title_acerca {
-  color: rgb(16, 16, 17);
+  color: rgb(14, 126, 111);
   text-shadow: #00BFFF;
 }
 
