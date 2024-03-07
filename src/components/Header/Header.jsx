@@ -81,8 +81,8 @@ const Header = ({ isOpen, setIsOpen }) => {
                         <p>cargando...</p>
                         :
                         isAuthenticated ?
-                            // <img src={user?.picture} alt="" className="ocultar" />
-                            <img src={logo} alt="" className="ocultar" />
+                            <img src={user?.picture} alt="" className="ocultar" />
+                            // <img src={logo} alt="" className="ocultar" />
                             :
 
                             isAuthenticated ?
